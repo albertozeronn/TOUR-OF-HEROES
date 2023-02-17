@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Spidey';
+    src: url('../../../assets/font/The-Amazing-Spider-Man.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  #fuente3{
+    font-family: 'Spidey';
+  }
+
+  .imagen {
+    background-image: url(../../../assets/img/spiderwebs-minimalism-digital-art-artwork-wallpaper-preview.jpg);
+  }

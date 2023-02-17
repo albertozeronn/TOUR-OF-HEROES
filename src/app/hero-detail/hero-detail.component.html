@@ -1,0 +1,6 @@
+<div class="imagen">
+  <h2 id="fuente4" class="text-white pt-5 pb-5">{{caracter.name | uppercase}} DETAILS</h2>
+  <div id="fuente5" class="text-white"><span>ID: </span>{{caracter.id}}</div>
+  <div class=""><img src="{{caracter.thumbnail.path+'.'+caracter.thumbnail.extension}}" class="w-80"></div>
+  <button class="bg-red-700 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mr-5 mt-10" type="button" (click)="goBack()">Atrás</button>
+</div>

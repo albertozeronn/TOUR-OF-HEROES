@@ -1,0 +1,38 @@
+<app-hero-search></app-hero-search>
+<div class="bg-black ">
+  <h2 id="fuente3" class="text-center text-3xl text-white pt-5 pb-5">MY HEROES</h2>
+  <ul class="max-w-screen-2xl divide-y pr-20 pl-20 grid grid-cols-4 divide-gray-200 dark:divide-gray-700">
+    <li class="pb-5 sm:pb-4"  *ngFor="let hero of heroes grid grid-cols-4">
+      <div class="flex items-center space-x-4">
+        <a routerLink="/detail/{{hero.id}}">
+        <div class="flex-shrink-0">
+          <img class="w-8 h-8 rounded-full" src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}">
+            
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+            {{hero.id}} | {{hero.name}}
+          </p>
+          <p class="text-sm text-gray-500 truncate dark:text-gray-400"></p>
+        </div>
+      </a>
+      </div>
+
+    </li>
+  </ul>
+    <div class="flex flex-row align-middle text-white items-center justify-center text-center">
+      <button [disabled]="offset === 0"
+        class="bg-red-700 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mb-5 mr-5 mt-10"
+        (click)="minPag()">&laquo;</button>
+      <p class="mt-3"> {{offset+1}} </p>
+      <p class="mt-3"> - </p>
+      <p class="mt-3">{{offset+21}}</p>
+      <p class="mt-3 text-black"> de </p>
+      <p class="mt-3"> de </p>
+      <p class="mt-3 text-black"> de </p>
+      <p class="mt-3"> {{total+1}} </p>
+      <button [disabled]=" offset >= total -20"
+        class="bg-red-700 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mb-5 mt-10 ml-5 mr-5"
+        (click)="maxPag()">&raquo;</button>
+    </div>
+    </div>

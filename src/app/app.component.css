@@ -1,0 +1,14 @@
+/* AppComponent's private CSS styles */
+.div-imagen-fondo {
+  background-image: url(../../assets/img/marvel-comics-iron-man-spider-man-wolverine-wallpaper-thumb.jpg);
+}
+@font-face {
+  font-family: 'Marvel';
+  src: url('../../assets/font/Marvel-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+#fuente{
+  font-family: 'Marvel';
+}
